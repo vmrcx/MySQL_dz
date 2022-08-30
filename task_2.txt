@@ -1,0 +1,51 @@
+C:\Users\Olga>mysqldump -u root -p example > sample.sql
+Enter password:
+C:\Users\Olga>mysql -u root -p sample < sample.sql
+Enter password:
+C:\Users\Olga>mysql -u root -p
+Enter password: 
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| dz                 |
+| example            |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sample             |
+| sys                |
+| vk                 |
++--------------------+
+mysql> use example;
+Database changed
+mysql> show tables;
++-------------------+
+| Tables_in_example |
++-------------------+
+| users             |
++-------------------+
+mysql> SELECT * FROM users;
++----+---------------+
+| id | name          |
++----+---------------+
+|  1 | Vikipiki      |
+|  2 | DunderPufflin |
+|  3 | MicHAelScoTT  |
++----+---------------+
+mysql> use sample;
+Database changed
+mysql> show tables;
++------------------+
+| Tables_in_sample |
++------------------+
+| users            |
++------------------+
+mysql> SELECT * FROM users;
++----+---------------+
+| id | name          |
++----+---------------+
+|  1 | Vikipiki      |
+|  2 | DunderPufflin |
+|  3 | MicHAelScoTT  |
++----+---------------+
